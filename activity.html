@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Activities - Kawalthe Stay</title>
+    
+    <link href="//fonts.googleapis.com/css?family=Signika:700%7CRoboto:700%2C400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body { margin: 0; padding: 0; background-color: #f9f9f9; font-family: 'Roboto', sans-serif; }
+
+        /* --- HERO SECTION --- */
+        .activity-hero {
+            height: 40vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/slide2.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .activity-hero h1 { font-family: 'Signika', sans-serif; font-size: 50px; margin: 0; }
+
+        /* --- CONTENT SECTION --- */
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 36px; color: #333; font-family: 'Roboto Slab', serif; }
+        .section-title p { color: #ff9200; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .activity-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border-bottom: 4px solid #388E3C;
+        }
+        .activity-card:hover { transform: translateY(-10px); }
+        .activity-card i { font-size: 40px; color: #388E3C; margin-bottom: 20px; }
+        .activity-card h3 { margin: 0 0 15px; font-family: 'Signika', sans-serif; color: #333; }
+        .activity-card ul { padding-left: 20px; color: #666; line-height: 1.8; }
+
+        /* Floating WhatsApp (Same as Index) */
+        .whatsapp-float {
+            position: fixed; bottom: 30px; left: 30px; background-color: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; text-align: center; font-size: 35px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 10000; display: flex; align-items: center; justify-content: center; text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="masthead split-header" style="position: relative; width: 100%; z-index: 999; background: #222; border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <header class="header-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; max-width: 1200px; margin: 0 auto;">
+        <a href="index.html" style="font-size: 24px; font-weight: bold; color: white; text-decoration: none;">KAWALTHE</a>
+        <nav class="navigation">
+            <ul style="list-style:none; display:flex; gap:30px; margin:0; padding:0;">
+                <li><a href="index.html" style="text-decoration:none; color:#ffffff; font-weight:600; text-transform: uppercase; font-size: 14px;">Home</a></li>
+                <li><a href="about.html" style="text-decoration:none; color:#ffffff; font-weight:600; text-transform: uppercase; font-size: 14px;">About</a></li>
+                <li><a href="explore.html" style="text-decoration:none; color:#ffffff; font-weight:600; text-transform: uppercase; font-size: 14px;">Explore</a></li>
+                <li><a href="packages.html" style="text-decoration:none; color:#ffffff; font-weight:600; text-transform: uppercase; font-size: 14px;">Packages</a></li>
+                <li><a href="activity.html" style="text-decoration:none; color:#ff9200; font-weight:600; text-transform: uppercase; font-size: 14px;">Activity</a></li>
+                <li><a href="photos.html" style="text-decoration:none; color:#ffffff; font-weight:600; text-transform: uppercase; font-size: 14px;">Photos</a></li>
+                <li><a href="contact.html" style="text-decoration:none; color:#ffffff; font-weight:600; text-transform: uppercase; font-size: 14px;">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<section class="activity-hero">
+    <div class="hero-content">
+        <p style="letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px;">The Farm Life</p>
+        <h1>Activities at Kawalthe</h1>
+    </div>
+</section>
+
+<div class="container">
+    <div class="section-title">
+        <p>Adventure & Relaxation</p>
+        <h2>Experience the Rural Soul</h2>
+    </div>
+
+    <div class="activity-grid">
+        <div class="activity-card">
+            <i class="fas fa-mountain"></i>
+            <h3>Outdoor Adventures</h3>
+            <ul>
+                <li>Guided Hiking Trails</li>
+                <li>Traditional Tractor Rides</li>
+                <li>Bird Watching at Sunrise</li>
+                <li>Riverside Picnic Areas</li>
+            </ul>
+        </div>
+
+        <div class="activity-card">
+            <i class="fas fa-home"></i>
+            <h3>Indoor & Culture</h3>
+            <ul>
+                <li>Traditional Chess & Board Games</li>
+                <li>Morning Yoga Classes</li>
+                <li>Chulha Cooking Workshops</li>
+                <li>Rustic Game Room</li>
+            </ul>
+        </div>
+
+        <div class="activity-card">
+            <i class="fas fa-calendar-star"></i>
+            <h3>Special Events</h3>
+            <ul>
+                <li>Live Folk Music Nights</li>
+                <li>Cultural Harvest Festivals</li>
+                <li>Seasonal Celebrations</li>
+                <li>Bonfire & Star Gazing</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<a href="https://wa.me/919970515438" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<footer style="background: #111; color: #777; padding: 40px 20px; text-align: center; margin-top: 80px;">
+    <p>&copy; 2024 Kawalthe Stay - Agro Tourism. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
