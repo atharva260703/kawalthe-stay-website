@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Activities - Kawalthe Stay</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background-color: #fdf8f1; 
+            font-family: 'Roboto', sans-serif; 
+            color: #333;
+        }
+
+        /* --- HEADER NAVIGATION --- */
+        .masthead { background: #222; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .header-bar { display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; max-width: 1200px; margin: 0 auto; }
+        .header-bar a { text-decoration: none; color: white; font-weight: bold; }
+        .navigation ul { list-style:none; display:flex; gap:30px; margin:0; padding:0; }
+        .navigation a { text-decoration:none; color:#ffffff; font-weight:600; text-transform: uppercase; font-size: 13px; }
+
+        /* --- SECTION INTRO --- */
+        .container { max-width: 1200px; margin: 80px auto; padding: 0 20px; }
+        
+        .intro-header { margin-bottom: 60px; }
+        .intro-header p.subtitle { color: #8d6e63; text-transform: uppercase; letter-spacing: 2px; font-size: 14px; margin-bottom: 10px; }
+        .intro-header h1 { font-family: 'Playfair Display', serif; font-size: 42px; margin: 0 0 15px 0; color: #2d2d2d; }
+        .intro-header p.description { font-size: 18px; color: #666; max-width: 700px; line-height: 1.6; }
+
+        /* --- ACTIVITY GRID --- */
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .activity-card {
+            background: #fffdf9;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .activity-card:hover { transform: translateY(-5px); }
+
+        .card-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin: 0 0 12px 0;
+            color: #2d2d2d;
+        }
+
+        .card-content p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        /* --- PILL BADGE --- */
+        .time-badge {
+            display: inline-block;
+            background-color: #f3d5a2; /* Light tan color from image */
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #5d4037;
+            width: fit-content;
+        }
+
+        /* --- UTILITIES --- */
+        .whatsapp-float {
+            position: fixed; bottom: 30px; left: 30px; background-color: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; text-align: center; font-size: 35px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 10000; display: flex; align-items: center; justify-content: center; text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="masthead">
+    <header class="header-bar">
+        <a href="index.html" style="font-size: 22px;">KAWALTHE</a>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="activity.html" style="color:#ff9200;">Activity</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="photos.html">Photos</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<div class="container">
+    <div class="intro-header">
+        <p class="subtitle">Activities</p>
+        <h1>Desi village moments, made to remember.</h1>
+        <p class="description">From temple walks to clay workshops, every experience is rooted in the rhythm of Kawalthe village.</p>
+    </div>
+
+    <div class="activity-grid">
+        <div class="activity-card">
+            <img src="images/temple-walk.jpg" alt="Temple Walk" class="card-image">
+            <div class="card-content">
+                <h3>Temple Bell Walk</h3>
+                <p>Morning village walk with chai, aarti, and stories from elders.</p>
+                <div class="time-badge">Daily • 6:30 AM</div>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <img src="images/cooking.jpg" alt="Cooking Demo" class="card-image">
+            <div class="card-content">
+                <h3>Village Cooking Demo</h3>
+                <p>Learn to cook bhakri, pithla, and seasonal bhaji on a chulha.</p>
+                <div class="time-badge">Fri–Sun • 3:00 PM</div>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <img src="images/honey.jpg" alt="Tasting" class="card-image">
+            <div class="card-content">
+                <h3>Honey & Jaggery Tasting</h3>
+                <p>Taste wild honey, jaggery, and hand-churned ghee with bhakri.</p>
+                <div class="time-badge">Sat • 5:30 PM</div>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <img src="images/cattle.jpg" alt="Cattle Care" class="card-image">
+            <div class="card-content">
+                <h3>Cattle Care & Barn Visit</h3>
+                <p>Feed calves, learn milking routines, and visit the dairy shed.</p>
+                <div class="time-badge">Daily • 8:00 AM</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="https://wa.me/919970515438" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
