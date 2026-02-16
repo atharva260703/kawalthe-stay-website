@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>Activities - Kawalthe Stay</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+
+body {
+margin: 0;
+padding: 0;
+background-color: #fdf8f1;
+font-family: 'Roboto', sans-serif;
+color: #333;
+}
+
+/* HEADER */
+
+.masthead { background: #222; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+.header-bar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 50px;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.header-bar a {
+text-decoration: none;
+color: white;
+font-weight: bold;
+}
+
+.navigation ul {
+list-style:none;
+display:flex;
+gap:30px;
+margin:0;
+padding:0;
+}
+
+.navigation a {
+text-decoration:none;
+color:#ffffff;
+font-weight:600;
+text-transform: uppercase;
+font-size: 13px;
+}
+
+/* CONTAINER */
+
+.container {
+max-width: 1200px;
+margin: 80px auto;
+padding: 0 20px;
+}
+
+.intro-header { margin-bottom: 40px; }
+
+.intro-header p.subtitle {
+color: #8d6e63;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-size: 14px;
+}
+
+.intro-header h1 {
+font-family: 'Playfair Display', serif;
+font-size: 42px;
+}
+
+.intro-header p.description {
+font-size: 18px;
+color: #666;
+max-width: 700px;
+}
+
+/* SCROLLABLE GRID */
+
+.activity-grid {
+display: flex;
+overflow-x: auto;
+gap: 25px;
+padding-bottom: 20px;
+scroll-behavior: smooth;
+scroll-snap-type: x mandatory;
+}
+
+.activity-grid::-webkit-scrollbar {
+height: 8px;
+}
+
+.activity-grid::-webkit-scrollbar-thumb {
+background: #c49a6c;
+border-radius: 10px;
+}
+
+/* CARD */
+
+.activity-card {
+min-width: 300px;
+max-width: 300px;
+background: #fffdf9;
+border-radius: 20px;
+overflow: hidden;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+transition: 0.4s;
+scroll-snap-align: start;
+animation: fadeUp 0.8s ease;
+cursor: pointer;
+}
+
+.activity-card:hover {
+transform: translateY(-10px) scale(1.03);
+}
+
+.card-image {
+width: 100%;
+height: 220px;
+object-fit: cover;
+}
+
+.card-content {
+padding: 20px;
+}
+
+.card-content h3 {
+font-family: 'Playfair Display';
+}
+
+@keyframes fadeUp {
+from {
+opacity: 0;
+transform: translateY(40px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* WhatsApp */
+
+.whatsapp-float {
+position: fixed;
+bottom: 30px;
+left: 30px;
+background-color: #25D366;
+color: white;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 30px;
+}
+
+/* ✅ MODAL STYLE */
+
+.modal {
+
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: rgba(0,0,0,0.7);
+justify-content:center;
+align-items:center;
+
+}
+
+.modal-content {
+
+background:white;
+padding:30px;
+border-radius:15px;
+max-width:500px;
+text-align:center;
+position:relative;
+
+}
+
+.close {
+
+position:absolute;
+top:10px;
+right:20px;
+font-size:28px;
+cursor:pointer;
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div class="masthead">
+
+<header class="header-bar">
+
+<a href="#">KAWALTHE</a>
+
+<nav class="navigation">
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="explore.html">Explore</a></li>
+<li><a href="packages.html">Packages</a></li>
+<li><a href="activity.html">Activity</a></li>
+<li><a href="photos.html">Photos</a></li>
+<li><a href="contact.html">Contacts</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+</div>
+
+
+<div class="container">
+
+<div class="intro-header">
+
+<p class="subtitle">Activities</p>
+
+<h1>Village moments, made to remember.</h1>
+
+<p class="description">
+From temple walks to clay workshops, every experience is rooted in the rhythm of Kawalthe village.
+</p>
+
+</div>
+
+
+<div class="activity-grid">
+
+
+<div class="activity-card" onclick="openModal('Rice Planting','Experience traditional rice planting with local farmers in muddy fields. Best during monsoon season.')">
+
+<img src="images/farmers-planting-rice-farm-35613264.jpg" class="card-image">
+
+<div class="card-content">
+
+<h3>Rice Planting</h3>
+<p>Planting of rice in traditional way.</p>
+
+</div>
+
+</div>
+
+
+
+<div class="activity-card" onclick="openModal('Village Cooking','Learn how to cook authentic Maharashtrian food using wood fire and traditional utensils.')">
+
+<img src="images/indian-old-woman-making-cooking-food-ancient-old-kitchen-illustration_569215-28.jpg" class="card-image">
+
+<div class="card-content">
+
+<h3>Village Cooking</h3>
+<p>Traditional village cooking experience.</p>
+
+</div>
+
+</div>
+
+
+
+<div class="activity-card" onclick="openModal('Village Meals','Enjoy farm fresh organic meals cooked in traditional village style.')">
+
+<img src="images/download.jpg" class="card-image">
+
+<div class="card-content">
+
+<h3>Village Meals</h3>
+<p>Nutritious food in natural atmosphere.</p>
+
+</div>
+
+</div>
+
+
+
+<div class="activity-card" onclick="openModal('Nature Visit','Explore waterfalls, greenery, bird watching and peaceful village nature.')">
+
+<img src="images/image-1729236966355.jpg" class="card-image">
+
+<div class="card-content">
+
+<h3>Nature Visit</h3>
+<p>Enjoy greenery and fresh air.</p>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+<a href="https://wa.me/919970515438" class="whatsapp-float">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+
+
+<!-- ✅ MODAL -->
+
+<div class="modal" id="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">&times;</span>
+
+<h2 id="modalTitle"></h2>
+
+<p id="modalText"></p>
+
+</div>
+
+</div>
+
+
+
+<!-- ✅ JAVASCRIPT -->
+
+<script>
+
+function openModal(title,text){
+
+document.getElementById("modal").style.display="flex";
+
+document.getElementById("modalTitle").innerText=title;
+
+document.getElementById("modalText").innerText=text;
+
+}
+
+function closeModal(){
+
+document.getElementById("modal").style.display="none";
+
+}
+
+window.onclick=function(event){
+
+if(event.target==document.getElementById("modal"))
+
+closeModal();
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>
